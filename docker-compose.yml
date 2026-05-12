@@ -1,0 +1,15 @@
+services:
+  mysql:
+    image: mysql:8.4
+    container_name: securepass-mysql
+    restart: unless-stopped
+    environment:
+      MYSQL_DATABASE: securepass_analyzer
+      MYSQL_ROOT_PASSWORD: securepass
+    ports:
+      - "3306:3306"
+    volumes:
+      - securepass_mysql:/var/lib/mysql
+
+volumes:
+  securepass_mysql:

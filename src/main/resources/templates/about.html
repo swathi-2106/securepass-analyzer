@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | SecurePass Analyzer</title>
+    <link rel="icon" type="image/png" th:href="@{/images/img.png}">
+
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+</head>
+<body>
+<header class="site-header">
+    <a class="brand" th:href="@{/}">SecurePass Analyzer</a>
+    <nav class="nav-links">
+        <a th:href="@{/}">Home</a>
+
+        <a th:href="@{/about}">About</a>
+        <a th:href="@{/analyzer}">Analyzer</a>
+    </nav>
+    <button class="icon-button" id="themeToggle" type="button" aria-label="Toggle theme">◐</button>
+</header>
+
+<main class="content-page">
+
+    <!-- HERO SECTION -->
+
+    <section>
+
+        <p class="eyebrow">System Architecture</p>
+
+        <h1>
+            Intelligent Password Analysis Using Trie & HashMap
+        </h1>
+
+        <p>
+            SecurePass Analyzer combines cybersecurity principles
+            with advanced data structures to identify weak,
+            predictable, and vulnerable passwords in real time.
+        </p>
+
+    </section>
+
+    <!-- FEATURES -->
+
+    <section class="section-grid">
+
+        <article class="info-card">
+
+            <h2>HashMap-Based Lookup</h2>
+
+            <p>
+                Frequently used weak passwords are stored in a HashMap,
+                enabling instant constant-time detection for common credentials
+                such as 123456, password, admin, and qwerty.
+            </p>
+
+        </article>
+
+        <article class="info-card">
+
+            <h2>Trie Pattern Scanning</h2>
+
+            <p>
+                A custom Trie implementation performs prefix matching,
+                dictionary-word detection, and pattern analysis
+                to identify predictable password structures.
+            </p>
+
+        </article>
+
+        <article class="info-card">
+
+            <h2>Real-World Security Insights</h2>
+
+            <p>
+                The analyzer demonstrates how low entropy,
+                leaked credentials, keyboard sequences,
+                and human-readable patterns increase security risks.
+            </p>
+
+        </article>
+
+    </section>
+
+    <!-- ARCHITECTURE PANEL -->
+
+    <section class="code-panel">
+
+        <h2>Application Architecture</h2>
+
+        <pre>
+controller       -> Spring MVC routes and API endpoints
+
+service          -> entropy scoring, validation,
+                    breach simulation, suggestions
+
+repository       -> MySQL fingerprint storage
+
+model            -> JPA entities and security models
+
+data structures  -> custom Trie implementation
+
+templates/static -> responsive cybersecurity UI
+</pre>
+
+    </section>
+
+</main>
+
+<script th:src="@{/js/app.js}"></script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SecurePass Analyzer</title>
+    <link rel="icon" type="image/png" th:href="@{/images/img.png}">
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+</head>
+<body>
+<header class="site-header">
+    <a class="brand" th:href="@{/}">SecurePass Analyzer</a>
+    <nav class="nav-links">
+        <a th:href="@{/}">Home</a>
+        <a th:href="@{/about}">About</a>
+        <a th:href="@{/analyzer}">Analyzer</a>
+    </nav>
+    <button class="icon-button" id="themeToggle" type="button" aria-label="Toggle theme">◐</button>
+</header>
+
+<main>
+    <section class="hero-grid">
+        <div class="hero-copy">
+            <p class="eyebrow">Detect Weak Passwords Before Attackers Do</p>
+            <h1>SecurePass Analyzer</h1>
+            <p> SecurePass Analyzer evaluates password strength using entropy analysis,
+                dictionary detection, and intelligent risk assessment algorithms.</p>
+            <div class="hero-actions">
+                <a class="primary-button" th:href="@{/analyzer}">Launch Analyzer</a>
+                <a class="secondary-button" th:href="@{/about}">View DSA Design</a>
+            </div>
+        </div>
+        <div class="terminal-panel" aria-label="Security telemetry">
+            <div class="terminal-top">
+                <span></span><span></span><span></span>
+            </div>
+            <pre>scan --password ********
+hashmap.common = clear
+trie.dictionary = watch
+entropy.bits = 91.7
+score = strong
+status = hardened</pre>
+        </div>
+    </section>
+
+    <section class="section-grid">
+
+        <article class="info-card">
+            <h2>Threat Detection</h2>
+
+            <p>
+                Evaluate password strength using entropy analysis,
+                pattern recognition, character diversity,
+                and sequence detection.
+            </p>
+        </article>
+
+        <article class="info-card">
+            <h2>Smart Pattern Analysis</h2>
+
+            <p>
+                Detect common and predictable passwords instantly
+                using HashMap lookup and Trie-based dictionary scanning.
+            </p>
+        </article>
+
+        <article class="info-card">
+            <h2>Secure Processing</h2>
+
+            <p>
+                Passwords are analyzed securely in memory,
+                while only encrypted SHA-256 fingerprints
+                are stored for analytics.
+            </p>
+        </article>
+
+    </section>
+</main>
+
+<script th:src="@{/js/app.js}"></script>
+</body>
+</html>
