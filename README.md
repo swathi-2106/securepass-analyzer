@@ -25,13 +25,6 @@ SecurePass Analyzer is a full-stack cybersecurity-themed password strength check
 - HTML, CSS, JavaScript
 - Maven Wrapper
 
-## Screenshots
-
-Add screenshots after running the app:
-
-- Home page
-- Password Analyzer dashboard
-- About page explaining Trie and HashMap usage
 
 ## Project Structure
 
