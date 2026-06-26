@@ -110,6 +110,3 @@ http://localhost:8080
 - Add rate limiting for public deployments
 - Expand dictionary datasets by language and domain
 
-## Portfolio Notes
-
-This project is designed for placement interviews and resumes because it combines Spring Boot full-stack development, cybersecurity concepts, data structures, secure coding practices, and deployable GitHub-ready project hygiene.
